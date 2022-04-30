@@ -19,7 +19,7 @@ sudo chmod 666 /dev/bus/usb/bus_id/device_id
 launch
 Change config/test_params.yaml depending on your camera.
 ```sh
-roslaunch libuvc_camera_ros_sandbox
+roslaunch libuvc_camera_ros_sandbox test.launch
 ```
 
 # Dependencies
