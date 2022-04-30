@@ -1,0 +1,8 @@
+frame_id: mycamera
+width: 1920
+height: 1080
+video_mode: mjpeg
+frame_rate: 30
+auto_exposure: true
+auto_white_balance: true
+auto_focus: true

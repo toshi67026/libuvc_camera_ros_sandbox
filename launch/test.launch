@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="libuvc_camera" type="camera_node" name="camera_node">
+    <rosparam command="load" file="$(find libuvc_camera_ros_sandbox)/config/test_params.yaml"/>
+  </node>
+  <node pkg="rqt_image_view" type="rqt_image_view" name="rqt_image_view">
+    <remap from="image" to="/image_raw" />
+  </node>
+  <node pkg="rosbag" type="record" name="bag_saver" args="-a -x .*/compressedDepth -O $(find libuvc_camera_ros_sandbox)/rosbag/libuvc_camera_ros_sandbox.bag"/>
+</launch>
